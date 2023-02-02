@@ -1,0 +1,25 @@
+CASO EN EL QUE SI COINDIDEN
+sudo <- leerSudoku "sudoku-easy-sol.txt"   
+sol <- leerSudoku "sudoku-easy-sol.txt"
+comprobarSudoku sudo sol
+comprobacionSudoku sudo sol
+
+SI QUEREMOS VER CUANDO NO COINCIDEN AMBOS
+sudo <- leerSudoku "sudoku-easy.txt"   
+sol <- leerSudoku "sudoku-easy-sol.txt"
+comprobarSudoku sudo sol
+comprobacionSudoku sudo sol
+
+COMPROBACION DE POSIBILIDADES
+sudo <- leerSudoku "sudoku-easy-sol.txt"   
+sol <- leerSudoku "sudoku-easy-sol.txt"
+let pos = (1,1)
+verPosibilidades sudo sol pos
+
+
+let array1 = listArray ((1,1),(3,2)) [1..6]
+let elem = sudoku2Lista array1
+let listaElem = listaElementos elem
+let salto = saltoLinea listaElem 2 1 
+escrituraSudoku salto
+cambio (listaElementos [1,2,3])
